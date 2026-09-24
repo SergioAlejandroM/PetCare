@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marea Salud — Agenda tu cita médica en minutos</title>
+<meta name="description" content="Agenda citas médicas con tu EPS en minutos: elige especialidad, médico y horario sin filas ni llamadas.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+    <div class="navbar-inner">
+        <a href="#inicio" class="brand">
+            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17" cy="17" r="17" fill="#7FFFD4"/>
+                <path d="M9 18c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0A2540" stroke-width="2.1" stroke-linecap="round" fill="none"/>
+                <path d="M9 22c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0B7285" stroke-width="2.1" stroke-linecap="round" fill="none" opacity="0.55"/>
+            </svg>
+            <span>Marea <strong>Salud</strong></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#especialidades">Especialidades</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#medicos">Médicos</a>
+            <a href="#faq">Preguntas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="navbar-actions">
+            <a href="#agendar" class="btn btn-primary btn-small">Agendar mi cita</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+    <div class="hero-blob" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <h1>Agenda tu cita médica en minutos, sin filas ni llamadas.</h1>
+            <p class="hero-lead">
+                Marea Salud conecta cada día a miles de pacientes con especialistas de su EPS.
+                Elige tu médico, escoge un horario disponible y confirma al instante.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#agendar" class="btn btn-primary">Agendar mi cita</a>
+                <a href="#especialidades" class="btn btn-outline">Ver especialidades</a>
+            </div>
+
+            <ul class="hero-trust">
+                <li><strong>4.8</strong> calificación de pacientes</li>
+                <li><strong>+120</strong> especialistas disponibles</li>
+                <li><strong>&lt;24h</strong> tiempo de respuesta</li>
+            </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="appt-card">
+                <div class="appt-card-top">
+                    <span class="appt-status">Cita confirmada</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#0B7285"/>
+                        <path d="M6 10.5l2.5 2.5L14 7.5" stroke="#7FFFD4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="appt-doctor">
+                    <div class="appt-avatar">CR</div>
+                    <div>
+                        <p class="appt-name">Dra. Camila Rondón</p>
+                        <p class="appt-specialty">Cardiología</p>
+                    </div>
+                </div>
+                <div class="appt-details">
+                    <div>
+                        <span class="appt-label">Fecha</span>
+                        <span class="appt-value">Jue, 3 oct · 10:30 a.m.</span>
+                    </div>
+                    <div>
+                        <span class="appt-label">Sede</span>
+                        <span class="appt-value">Chapinero</span>
+                    </div>
+                </div>
+            </div>
+            <div class="appt-card appt-card-ghost"></div>
+        </div>
+    </div>
+
+    <svg class="wave-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,32 C240,90 480,0 720,28 C960,56 1200,10 1440,40 L1440,90 L0,90 Z" fill="#F1FFFA"/>
+    </svg>
+</section>
+
+<!-- ===================== ESPECIALIDADES ===================== -->
+<section class="especialidades" id="especialidades">
+    <div class="section-inner">
+        <h2>Especialidades disponibles</h2>
+        <p class="section-lead">Selecciona una especialidad para empezar a agendar; se completará automáticamente en el formulario.</p>
+
+        <div class="especialidad-grid">
+
+            <button class="esp-card" data-especialidad="Medicina General">
+                <span class="esp-icon" style="--tint:#7FFFD4;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <span class="esp-title">Medicina General</span>
+                <span class="esp-desc">Consulta y valoración inicial de cualquier síntoma.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Pediatría">
+                <span class="esp-icon" style="--tint:#FFE38A;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-7-9.5A4.5 4.5 0 0112 7a4.5 4.5 0 017 4.5C19 16.65 12 21 12 21z" stroke="#0A2540" stroke-width="1.8"/></svg>
+                </span>
+                <span class="esp-title">Pediatría</span>
+                <span class="esp-desc">Cuidado médico para niñas, niños y adolescentes.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Ginecología">
+                <span class="esp-icon" style="--tint:#FFC1D9;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" stroke="#0A2540" stroke-width="1.8"/><path d="M12 14v7M9 18h6" stroke="#0A2540" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <span class="esp-title">Ginecología</span>
+                <span class="esp-desc">Salud íntima y control ginecológico integral.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Cardiología">
+                <span class="esp-icon" style="--tint:#FFB3A7;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.8 8.6c0 4.7-8.8 10-8.8 10s-8.8-5.3-8.8-10a4.6 4.6 0 018.8-1.9 4.6 4.6 0 018.8 1.9z" stroke="#0A2540" stroke-width="1.8"/></svg>
+                </span>
+                <span class="esp-title">Cardiología</span>
+                <span class="esp-desc">Evaluación y seguimiento de la salud del corazón.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Dermatología">
+                <span class="esp-icon" style="--tint:#C9F3E4;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0A2540" stroke-width="1.8"/><circle cx="9.5" cy="10" r="1.2" fill="#0A2540"/><circle cx="14" cy="14" r="1.4" fill="#0A2540"/></svg>
+                </span>
+                <span class="esp-title">Dermatología</span>
+                <span class="esp-desc">Diagnóstico y tratamiento de piel, cabello y uñas.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Odontología">
+                <span class="esp-icon" style="--tint:#BFE3FF;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 4c-3 0-5 2-5 5 0 4 1.5 11 3 11 1.2 0 1-5 2-5s.8 5 2 5c1.5 0 3-7 3-11 0-3-2-5-5-5z" stroke="#0A2540" stroke-width="1.6"/></svg>
+                </span>
+                <span class="esp-title">Odontología</span>
+                <span class="esp-desc">Salud oral, limpieza, caries y ortodoncia.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Psicología">
+                <span class="esp-icon" style="--tint:#E4D4FF;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3a5 5 0 00-4 8 6 6 0 004 10h3a1 1 0 001-1v-2a2 2 0 012-2 3 3 0 000-6 1 1 0 01-1-1 5 5 0 00-5-6z" stroke="#0A2540" stroke-width="1.6"/></svg>
+                </span>
+                <span class="esp-title">Psicología</span>
+                <span class="esp-desc">Acompañamiento en salud mental y bienestar emocional.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Nutrición">
+                <span class="esp-icon" style="--tint:#D8F5A2;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 2 6 5 6 9a6 6 0 01-12 0c0-4 2-7 6-9z" stroke="#0A2540" stroke-width="1.8"/></svg>
+                </span>
+                <span class="esp-title">Nutrición</span>
+                <span class="esp-desc">Planes de alimentación a la medida de tus objetivos.</span>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CÓMO FUNCIONA ===================== -->
+<section class="como-funciona" id="como-funciona">
+    <div class="section-inner">
+        <h2>Tres pasos y listo</h2>
+        <p class="section-lead">Así de simple es pasar de buscar un médico a tener tu cita confirmada.</p>
+
+        <ol class="pasos">
+            <li class="paso">
+                <span class="paso-num">1</span>
+                <h3>Elige especialidad y médico</h3>
+                <p>Explora los especialistas disponibles en tu sede y filtra por lo que necesitas.</p>
+            </li>
+            <li class="paso">
+                <span class="paso-num">2</span>
+                <h3>Selecciona fecha y horario</h3>
+                <p>Consulta la disponibilidad real y escoge el momento que mejor te quede.</p>
+            </li>
+            <li class="paso">
+                <span class="paso-num">3</span>
+                <h3>Recibe la confirmación</h3>
+                <p>Te avisamos por correo cuando tu cita quede agendada con tu especialista.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ===================== FORMULARIO DE AGENDAMIENTO ===================== -->
+<section class="agendar" id="agendar">
+    <div class="section-inner agendar-grid">
+
+        <div class="agendar-aside">
+            <span class="pill-badge">Solicitud de cita</span>
+            <h2>Cuéntanos qué necesitas y te contactamos</h2>
+            <p>
+                Completa el formulario con tus datos y los de tu EPS. Un asesor confirmará el horario
+                exacto contigo por correo o teléfono en menos de 24 horas hábiles.
+            </p>
+
+            <div class="aside-contact">
+                <p><strong>Línea de citas</strong><br>(601) 742 0198</p>
+                <p><strong>WhatsApp</strong><br>+57 300 555 0198</p>
+                <p><strong>Horario de atención</strong><br>Lunes a sábado, 7:00 a.m. – 7:00 p.m.</p>
+            </div>
+        </div>
+
+        <div class="agendar-form-wrap">
+            <form id="formCita" novalidate>
+
+                <div class="form-row">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Laura Gómez" autocomplete="name">
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                    <div class="campo">
+                        <label for="tipoDocumento">Tipo de documento</label>
+                        <select id="tipoDocumento" name="tipoDocumento">
+                            <option value="CC">Cédula de ciudadanía</option>
+                            <option value="TI">Tarjeta de identidad</option>
+                            <option value="CE">Cédula de extranjería</option>
+                            <option value="PA">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="documento">Número de documento</label>
+                        <input type="text" id="documento" name="documento" placeholder="Ej. 1020304050" inputmode="numeric">
+                        <span class="error-msg" id="error-documento"></span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" autocomplete="email">
+                        <span class="error-msg" id="error-correo"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono de contacto</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3011234567" autocomplete="tel">
+                        <span class="error-msg" id="error-telefono"></span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                    <div class="campo">
+                        <label for="eps">EPS / Aseguradora</label>
+                        <select id="eps" name="eps">
+                            <option value="" selected disabled>Selecciona tu EPS</option>
+                            <option>Sura EPS</option>
+                            <option>Nueva EPS</option>
+                            <option>Sanitas</option>
+                            <option>Compensar</option>
+                            <option>Famisanar</option>
+                            <option>Coosalud</option>
+                            <option>Otra</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="especialidad">Especialidad</label>
+                        <select id="especialidad" name="especialidad">
+                            <option value="" selected disabled>Selecciona una especialidad</option>
+                            <option>Medicina General</option>
+                            <option>Pediatría</option>
+                            <option>Ginecología</option>
+                            <option>Cardiología</option>
+                            <option>Dermatología</option>
+                            <option>Odontología</option>
+                            <option>Psicología</option>
+                            <option>Nutrición</option>
+                        </select>
+                        <span class="error-msg" id="error-especialidad"></span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                    <div class="campo">
+                        <label for="sede">Sede de preferencia</label>
+                        <select id="sede" name="sede">
+                            <option>Chapinero</option>
+                            <option>Suba</option>
+                            <option>Kennedy</option>
+                            <option>Engativá</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha">Fecha preferida</label>
+                        <input type="date" id="fecha" name="fecha">
+                        <span class="error-msg" id="error-fecha"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="campo">
+                        <label for="motivo">Motivo de la consulta</label>
+                        <textarea id="motivo" name="motivo" rows="3" placeholder="Cuéntanos brevemente qué síntomas o necesidad tienes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar solicitud de cita</button>
+                    <button type="reset" class="btn btn-ghost">Limpiar formulario</button>
+                </div>
+
+                <p class="form-success" id="formSuccess" role="status" hidden>
+                    Tu solicitud fue enviada. Te contactaremos para confirmar el horario exacto de tu cita.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="section-inner">
+        <div class="mis-citas-header">
+            <h3>Tus solicitudes recientes <span class="contador" id="contadorCitas">0</span></h3>
+            <button type="button" class="link-btn" id="btnBorrarCitas" hidden>Borrar todas</button>
+        </div>
+        <div class="lista-citas" id="listaCitas">
+            <p class="estado-vacio" id="citasVacio">Aún no has enviado ninguna solicitud de cita.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MÉDICOS ===================== -->
+<section class="medicos" id="medicos">
+    <div class="section-inner">
+        <h2>Especialistas destacados</h2>
+        <p class="section-lead">Un vistazo a algunos de los médicos que hacen parte de la red Marea Salud.</p>
+
+        <div class="medicos-grid">
+            <article class="medico-card">
+                <div class="medico-avatar" style="--tint:#7FFFD4;">AM</div>
+                <h3>Dr. Andrés Molina</h3>
+                <p class="medico-esp">Medicina General</p>
+                <p class="medico-exp">12 años de experiencia</p>
+            </article>
+            <article class="medico-card">
+                <div class="medico-avatar" style="--tint:#FFE38A;">LR</div>
+                <h3>Dra. Lucía Restrepo</h3>
+                <p class="medico-esp">Pediatría</p>
+                <p class="medico-exp">9 años de experiencia</p>
+            </article>
+            <article class="medico-card">
+                <div class="medico-avatar" style="--tint:#FFB3A7;">CR</div>
+                <h3>Dra. Camila Rondón</h3>
+                <p class="medico-esp">Cardiología</p>
+                <p class="medico-exp">15 años de experiencia</p>
+            </article>
+            <article class="medico-card">
+                <div class="medico-avatar" style="--tint:#BFE3FF;">JT</div>
+                <h3>Dr. Julián Torres</h3>
+                <p class="medico-esp">Odontología</p>
+                <p class="medico-exp">7 años de experiencia</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+    <div class="section-inner section-inner-narrow">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-list" id="faqList">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Necesito estar afiliado a una EPS para agendar?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí, la cita se gestiona con la EPS que indiques en el formulario. Si eres particular, contáctanos por la línea de citas y te orientamos sobre el costo de la consulta.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Puedo cancelar o reprogramar mi cita?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Claro. Puedes hacerlo desde el correo de confirmación o llamando a la línea de citas hasta con 2 horas de anticipación, sin ningún costo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Cuánto tarda la confirmación de la cita?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Un asesor confirma el horario exacto en menos de 24 horas hábiles por correo electrónico o WhatsApp.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿Atienden citas de urgencia?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Para urgencias médicas dirígete a tu IPS más cercana o llama a la línea de emergencias. Este servicio agenda consultas programadas, no urgencias.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    ¿La plataforma tiene algún costo?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Agendar tu cita a través de Marea Salud no tiene ningún costo adicional; solo aplican los copagos habituales de tu EPS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CTA CONTACTO ===================== -->
+<section class="cta-banner" id="contacto">
+    <div class="section-inner cta-banner-inner">
+        <div>
+            <h2>¿Prefieres que te ayudemos por teléfono?</h2>
+            <p>Nuestro equipo agenda tu cita mientras hablamos, sin necesidad de llenar el formulario.</p>
+        </div>
+        <a href="tel:+576017420198" class="btn btn-primary">Llamar a la línea de citas</a>
+    </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="section-inner footer-inner">
+        <div class="footer-brand">
+            <a href="#inicio" class="brand brand-footer">
+                <svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="17" cy="17" r="17" fill="#7FFFD4"/>
+                    <path d="M9 18c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0A2540" stroke-width="2.1" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span>Marea <strong>Salud</strong></span>
+            </a>
+            <p>Agendamiento de citas médicas para pacientes de las principales EPS del país.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#agendar">Agendar cita</a>
+            <a href="#faq">Preguntas frecuentes</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <a href="tel:+576017420198">(601) 742 0198</a>
+            <a href="mailto:citas@mareasalud.co">citas@mareasalud.co</a>
+            <span>Cra. 15 # 82-30, Bogotá</span>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Marea Salud. Entidad autorizada por la Superintendencia Nacional de Salud.</p>
+    </div>
+</footer>
+
+<script src="js/validations.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
