@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marea Salud — Agenda tu cita médica en minutos</title>
-<meta name="description" content="Agenda citas médicas con tu EPS en minutos: elige especialidad, médico y horario sin filas ni llamadas.">
+<title>Huellitas Vet — Agenda la cita veterinaria de tu mascota en minutos</title>
+<meta name="description" content="Agenda citas veterinarias para tu mascota en minutos: elige especialidad, veterinario y horario sin filas ni llamadas.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +22,19 @@
                 <path d="M9 18c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0A2540" stroke-width="2.1" stroke-linecap="round" fill="none"/>
                 <path d="M9 22c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0B7285" stroke-width="2.1" stroke-linecap="round" fill="none" opacity="0.55"/>
             </svg>
-            <span>Marea <strong>Salud</strong></span>
+            <span>Huellitas <strong>Vet</strong></span>
         </a>
 
         <nav class="nav-links" id="navLinks">
             <a href="#especialidades">Especialidades</a>
             <a href="#como-funciona">Cómo funciona</a>
-            <a href="#medicos">Médicos</a>
+            <a href="#medicos">Veterinarios</a>
             <a href="#faq">Preguntas</a>
             <a href="#contacto">Contacto</a>
         </nav>
 
         <div class="navbar-actions">
-            <a href="#agendar" class="btn btn-primary btn-small">Agendar mi cita</a>
+            <a href="#agendar" class="btn btn-primary btn-small">Agendar cita</a>
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -50,20 +50,20 @@
 
     <div class="hero-inner">
         <div class="hero-copy">
-            <h1>Agenda tu cita médica en minutos, sin filas ni llamadas.</h1>
+            <h1>Agenda la cita veterinaria de tu mascota en minutos, sin filas ni llamadas.</h1>
             <p class="hero-lead">
-                Marea Salud conecta cada día a miles de pacientes con especialistas de su EPS.
-                Elige tu médico, escoge un horario disponible y confirma al instante.
+                Huellitas Vet conecta cada día a cientos de dueños de mascota con veterinarios de confianza.
+                Elige el especialista, escoge un horario disponible y confirma al instante.
             </p>
 
             <div class="hero-actions">
-                <a href="#agendar" class="btn btn-primary">Agendar mi cita</a>
+                <a href="#agendar" class="btn btn-primary">Agendar cita</a>
                 <a href="#especialidades" class="btn btn-outline">Ver especialidades</a>
             </div>
 
             <ul class="hero-trust">
-                <li><strong>4.8</strong> calificación de pacientes</li>
-                <li><strong>+120</strong> especialistas disponibles</li>
+                <li><strong>4.8</strong> calificación de dueños de mascota</li>
+                <li><strong>+120</strong> veterinarios disponibles</li>
                 <li><strong>&lt;24h</strong> tiempo de respuesta</li>
             </ul>
         </div>
@@ -78,13 +78,17 @@
                     </svg>
                 </div>
                 <div class="appt-doctor">
-                    <div class="appt-avatar">CR</div>
+                    <div class="appt-avatar">AM</div>
                     <div>
-                        <p class="appt-name">Dra. Camila Rondón</p>
-                        <p class="appt-specialty">Cardiología</p>
+                        <p class="appt-name">Dr. Andrés Molina</p>
+                        <p class="appt-specialty">Medicina General Veterinaria</p>
                     </div>
                 </div>
                 <div class="appt-details">
+                    <div>
+                        <span class="appt-label">Mascota</span>
+                        <span class="appt-value">Rocky · Labrador</span>
+                    </div>
                     <div>
                         <span class="appt-label">Fecha</span>
                         <span class="appt-value">Jue, 3 oct · 10:30 a.m.</span>
@@ -107,73 +111,73 @@
 <!-- ===================== ESPECIALIDADES ===================== -->
 <section class="especialidades" id="especialidades">
     <div class="section-inner">
-        <h2>Especialidades disponibles</h2>
+        <h2>Especialidades veterinarias disponibles</h2>
         <p class="section-lead">Selecciona una especialidad para empezar a agendar; se completará automáticamente en el formulario.</p>
 
         <div class="especialidad-grid">
 
-            <button class="esp-card" data-especialidad="Medicina General">
+            <button class="esp-card" data-especialidad="Medicina General Veterinaria">
                 <span class="esp-icon" style="--tint:#7FFFD4;">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/></svg>
                 </span>
-                <span class="esp-title">Medicina General</span>
-                <span class="esp-desc">Consulta y valoración inicial de cualquier síntoma.</span>
+                <span class="esp-title">Medicina General Veterinaria</span>
+                <span class="esp-desc">Consulta y valoración general de la salud de tu mascota.</span>
             </button>
 
-            <button class="esp-card" data-especialidad="Pediatría">
+            <button class="esp-card" data-especialidad="Vacunación y Desparasitación">
                 <span class="esp-icon" style="--tint:#FFE38A;">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-7-9.5A4.5 4.5 0 0112 7a4.5 4.5 0 017 4.5C19 16.65 12 21 12 21z" stroke="#0A2540" stroke-width="1.8"/></svg>
                 </span>
-                <span class="esp-title">Pediatría</span>
-                <span class="esp-desc">Cuidado médico para niñas, niños y adolescentes.</span>
+                <span class="esp-title">Vacunación y Desparasitación</span>
+                <span class="esp-desc">Esquemas de vacunación y control de parásitos al día.</span>
             </button>
 
-            <button class="esp-card" data-especialidad="Ginecología">
-                <span class="esp-icon" style="--tint:#FFC1D9;">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" stroke="#0A2540" stroke-width="1.8"/><path d="M12 14v7M9 18h6" stroke="#0A2540" stroke-width="1.8" stroke-linecap="round"/></svg>
-                </span>
-                <span class="esp-title">Ginecología</span>
-                <span class="esp-desc">Salud íntima y control ginecológico integral.</span>
-            </button>
-
-            <button class="esp-card" data-especialidad="Cardiología">
-                <span class="esp-icon" style="--tint:#FFB3A7;">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.8 8.6c0 4.7-8.8 10-8.8 10s-8.8-5.3-8.8-10a4.6 4.6 0 018.8-1.9 4.6 4.6 0 018.8 1.9z" stroke="#0A2540" stroke-width="1.8"/></svg>
-                </span>
-                <span class="esp-title">Cardiología</span>
-                <span class="esp-desc">Evaluación y seguimiento de la salud del corazón.</span>
-            </button>
-
-            <button class="esp-card" data-especialidad="Dermatología">
-                <span class="esp-icon" style="--tint:#C9F3E4;">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0A2540" stroke-width="1.8"/><circle cx="9.5" cy="10" r="1.2" fill="#0A2540"/><circle cx="14" cy="14" r="1.4" fill="#0A2540"/></svg>
-                </span>
-                <span class="esp-title">Dermatología</span>
-                <span class="esp-desc">Diagnóstico y tratamiento de piel, cabello y uñas.</span>
-            </button>
-
-            <button class="esp-card" data-especialidad="Odontología">
+            <button class="esp-card" data-especialidad="Odontología Veterinaria">
                 <span class="esp-icon" style="--tint:#BFE3FF;">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 4c-3 0-5 2-5 5 0 4 1.5 11 3 11 1.2 0 1-5 2-5s.8 5 2 5c1.5 0 3-7 3-11 0-3-2-5-5-5z" stroke="#0A2540" stroke-width="1.6"/></svg>
                 </span>
-                <span class="esp-title">Odontología</span>
-                <span class="esp-desc">Salud oral, limpieza, caries y ortodoncia.</span>
+                <span class="esp-title">Odontología Veterinaria</span>
+                <span class="esp-desc">Limpieza dental y tratamiento de problemas bucales.</span>
             </button>
 
-            <button class="esp-card" data-especialidad="Psicología">
+            <button class="esp-card" data-especialidad="Cardiología Veterinaria">
+                <span class="esp-icon" style="--tint:#FFB3A7;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.8 8.6c0 4.7-8.8 10-8.8 10s-8.8-5.3-8.8-10a4.6 4.6 0 018.8-1.9 4.6 4.6 0 018.8 1.9z" stroke="#0A2540" stroke-width="1.8"/></svg>
+                </span>
+                <span class="esp-title">Cardiología Veterinaria</span>
+                <span class="esp-desc">Evaluación y seguimiento de la salud del corazón.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Dermatología Veterinaria">
+                <span class="esp-icon" style="--tint:#C9F3E4;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0A2540" stroke-width="1.8"/><circle cx="9.5" cy="10" r="1.2" fill="#0A2540"/><circle cx="14" cy="14" r="1.4" fill="#0A2540"/></svg>
+                </span>
+                <span class="esp-title">Dermatología Veterinaria</span>
+                <span class="esp-desc">Diagnóstico y tratamiento de piel, pelaje y alergias.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Cirugía Veterinaria">
+                <span class="esp-icon" style="--tint:#FFC1D9;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" stroke="#0A2540" stroke-width="1.8"/><path d="M12 14v7M9 18h6" stroke="#0A2540" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <span class="esp-title">Cirugía Veterinaria</span>
+                <span class="esp-desc">Procedimientos quirúrgicos, esterilización y castración.</span>
+            </button>
+
+            <button class="esp-card" data-especialidad="Etología y Comportamiento">
                 <span class="esp-icon" style="--tint:#E4D4FF;">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3a5 5 0 00-4 8 6 6 0 004 10h3a1 1 0 001-1v-2a2 2 0 012-2 3 3 0 000-6 1 1 0 01-1-1 5 5 0 00-5-6z" stroke="#0A2540" stroke-width="1.6"/></svg>
                 </span>
-                <span class="esp-title">Psicología</span>
-                <span class="esp-desc">Acompañamiento en salud mental y bienestar emocional.</span>
+                <span class="esp-title">Etología y Comportamiento</span>
+                <span class="esp-desc">Acompañamiento para problemas de conducta y ansiedad.</span>
             </button>
 
-            <button class="esp-card" data-especialidad="Nutrición">
+            <button class="esp-card" data-especialidad="Nutrición Animal">
                 <span class="esp-icon" style="--tint:#D8F5A2;">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 2 6 5 6 9a6 6 0 01-12 0c0-4 2-7 6-9z" stroke="#0A2540" stroke-width="1.8"/></svg>
                 </span>
-                <span class="esp-title">Nutrición</span>
-                <span class="esp-desc">Planes de alimentación a la medida de tus objetivos.</span>
+                <span class="esp-title">Nutrición Animal</span>
+                <span class="esp-desc">Planes de alimentación según edad, raza y peso.</span>
             </button>
 
         </div>
@@ -183,14 +187,14 @@
 <!-- ===================== CÓMO FUNCIONA ===================== -->
 <section class="como-funciona" id="como-funciona">
     <div class="section-inner">
-        <h2>Tres pasos y listo</h2>
-        <p class="section-lead">Así de simple es pasar de buscar un médico a tener tu cita confirmada.</p>
+        <h2>Tres pasos y tu mascota lista</h2>
+        <p class="section-lead">Así de simple es pasar de buscar un veterinario a tener la cita de tu mascota confirmada.</p>
 
         <ol class="pasos">
             <li class="paso">
                 <span class="paso-num">1</span>
-                <h3>Elige especialidad y médico</h3>
-                <p>Explora los especialistas disponibles en tu sede y filtra por lo que necesitas.</p>
+                <h3>Elige especialidad y veterinario</h3>
+                <p>Explora los veterinarios disponibles en tu sede y filtra por lo que tu mascota necesita.</p>
             </li>
             <li class="paso">
                 <span class="paso-num">2</span>
@@ -200,7 +204,7 @@
             <li class="paso">
                 <span class="paso-num">3</span>
                 <h3>Recibe la confirmación</h3>
-                <p>Te avisamos por correo cuando tu cita quede agendada con tu especialista.</p>
+                <p>Te avisamos por correo cuando la cita de tu mascota quede agendada con el veterinario.</p>
             </li>
         </ol>
     </div>
@@ -212,9 +216,9 @@
 
         <div class="agendar-aside">
             <span class="pill-badge">Solicitud de cita</span>
-            <h2>Cuéntanos qué necesitas y te contactamos</h2>
+            <h2>Cuéntanos qué necesita tu mascota y te contactamos</h2>
             <p>
-                Completa el formulario con tus datos y los de tu EPS. Un asesor confirmará el horario
+                Completa el formulario con tus datos y los de tu mascota. Un asesor confirmará el horario
                 exacto contigo por correo o teléfono en menos de 24 horas hábiles.
             </p>
 
@@ -230,7 +234,7 @@
 
                 <div class="form-row">
                     <div class="campo">
-                        <label for="nombre">Nombre completo</label>
+                        <label for="nombre">Nombre completo (dueño/a)</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Ej. Laura Gómez" autocomplete="name">
                         <span class="error-msg" id="error-nombre"></span>
                     </div>
@@ -268,30 +272,42 @@
 
                 <div class="form-row form-row-2">
                     <div class="campo">
-                        <label for="eps">EPS / Aseguradora</label>
-                        <select id="eps" name="eps">
-                            <option value="" selected disabled>Selecciona tu EPS</option>
-                            <option>Sura EPS</option>
-                            <option>Nueva EPS</option>
-                            <option>Sanitas</option>
-                            <option>Compensar</option>
-                            <option>Famisanar</option>
-                            <option>Coosalud</option>
-                            <option>Otra</option>
+                        <label for="nombreMascota">Nombre de tu mascota</label>
+                        <input type="text" id="nombreMascota" name="nombreMascota" placeholder="Ej. Rocky">
+                        <span class="error-msg" id="error-nombreMascota"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="especieMascota">Especie</label>
+                        <select id="especieMascota" name="especieMascota">
+                            <option value="" selected disabled>Selecciona una especie</option>
+                            <option>Perro</option>
+                            <option>Gato</option>
+                            <option>Ave</option>
+                            <option>Roedor</option>
+                            <option>Reptil</option>
+                            <option>Otro</option>
                         </select>
+                        <span class="error-msg" id="error-especieMascota"></span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                    <div class="campo">
+                        <label for="raza">Raza (opcional)</label>
+                        <input type="text" id="raza" name="raza" placeholder="Ej. Labrador">
                     </div>
                     <div class="campo">
                         <label for="especialidad">Especialidad</label>
                         <select id="especialidad" name="especialidad">
                             <option value="" selected disabled>Selecciona una especialidad</option>
-                            <option>Medicina General</option>
-                            <option>Pediatría</option>
-                            <option>Ginecología</option>
-                            <option>Cardiología</option>
-                            <option>Dermatología</option>
-                            <option>Odontología</option>
-                            <option>Psicología</option>
-                            <option>Nutrición</option>
+                            <option>Medicina General Veterinaria</option>
+                            <option>Vacunación y Desparasitación</option>
+                            <option>Odontología Veterinaria</option>
+                            <option>Cardiología Veterinaria</option>
+                            <option>Dermatología Veterinaria</option>
+                            <option>Cirugía Veterinaria</option>
+                            <option>Etología y Comportamiento</option>
+                            <option>Nutrición Animal</option>
                         </select>
                         <span class="error-msg" id="error-especialidad"></span>
                     </div>
@@ -317,7 +333,7 @@
                 <div class="form-row">
                     <div class="campo">
                         <label for="motivo">Motivo de la consulta</label>
-                        <textarea id="motivo" name="motivo" rows="3" placeholder="Cuéntanos brevemente qué síntomas o necesidad tienes"></textarea>
+                        <textarea id="motivo" name="motivo" rows="3" placeholder="Cuéntanos brevemente qué síntomas o necesidad tiene tu mascota"></textarea>
                     </div>
                 </div>
 
@@ -327,7 +343,7 @@
                 </div>
 
                 <p class="form-success" id="formSuccess" role="status" hidden>
-                    Tu solicitud fue enviada. Te contactaremos para confirmar el horario exacto de tu cita.
+                    Tu solicitud fue enviada. Te contactaremos para confirmar el horario exacto de la cita.
                 </p>
             </form>
         </div>
@@ -344,35 +360,35 @@
     </div>
 </section>
 
-<!-- ===================== MÉDICOS ===================== -->
+<!-- ===================== VETERINARIOS ===================== -->
 <section class="medicos" id="medicos">
     <div class="section-inner">
-        <h2>Especialistas destacados</h2>
-        <p class="section-lead">Un vistazo a algunos de los médicos que hacen parte de la red Marea Salud.</p>
+        <h2>Veterinarios destacados</h2>
+        <p class="section-lead">Un vistazo a algunos de los veterinarios que hacen parte de la red Huellitas Vet.</p>
 
         <div class="medicos-grid">
             <article class="medico-card">
                 <div class="medico-avatar" style="--tint:#7FFFD4;">AM</div>
                 <h3>Dr. Andrés Molina</h3>
-                <p class="medico-esp">Medicina General</p>
+                <p class="medico-esp">Medicina General Veterinaria</p>
                 <p class="medico-exp">12 años de experiencia</p>
             </article>
             <article class="medico-card">
                 <div class="medico-avatar" style="--tint:#FFE38A;">LR</div>
                 <h3>Dra. Lucía Restrepo</h3>
-                <p class="medico-esp">Pediatría</p>
+                <p class="medico-esp">Cirugía Veterinaria</p>
                 <p class="medico-exp">9 años de experiencia</p>
             </article>
             <article class="medico-card">
                 <div class="medico-avatar" style="--tint:#FFB3A7;">CR</div>
                 <h3>Dra. Camila Rondón</h3>
-                <p class="medico-esp">Cardiología</p>
+                <p class="medico-esp">Cardiología Veterinaria</p>
                 <p class="medico-exp">15 años de experiencia</p>
             </article>
             <article class="medico-card">
                 <div class="medico-avatar" style="--tint:#BFE3FF;">JT</div>
                 <h3>Dr. Julián Torres</h3>
-                <p class="medico-esp">Odontología</p>
+                <p class="medico-esp">Odontología Veterinaria</p>
                 <p class="medico-exp">7 años de experiencia</p>
             </article>
         </div>
@@ -387,16 +403,16 @@
         <div class="faq-list" id="faqList">
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    ¿Necesito estar afiliado a una EPS para agendar?
+                    ¿Necesito algún seguro para agendar la cita?
                     <span class="faq-icon"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Sí, la cita se gestiona con la EPS que indiques en el formulario. Si eres particular, contáctanos por la línea de citas y te orientamos sobre el costo de la consulta.</p>
+                    <p>No. Puedes agendar la cita de tu mascota sin necesidad de un seguro o plan prepagado. Si cuentas con uno, cuéntanoslo al confirmar y verificamos la cobertura contigo.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    ¿Puedo cancelar o reprogramar mi cita?
+                    ¿Puedo cancelar o reprogramar la cita de mi mascota?
                     <span class="faq-icon"></span>
                 </button>
                 <div class="faq-answer">
@@ -414,11 +430,11 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    ¿Atienden citas de urgencia?
+                    ¿Atienden urgencias veterinarias?
                     <span class="faq-icon"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Para urgencias médicas dirígete a tu IPS más cercana o llama a la línea de emergencias. Este servicio agenda consultas programadas, no urgencias.</p>
+                    <p>Para urgencias dirígete a la clínica veterinaria con atención 24 horas más cercana. Este servicio agenda consultas programadas, no urgencias.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -427,7 +443,7 @@
                     <span class="faq-icon"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Agendar tu cita a través de Marea Salud no tiene ningún costo adicional; solo aplican los copagos habituales de tu EPS.</p>
+                    <p>Agendar la cita de tu mascota a través de Huellitas Vet no tiene ningún costo adicional; solo pagas la consulta directamente en la sede el día de la cita.</p>
                 </div>
             </div>
         </div>
@@ -439,7 +455,7 @@
     <div class="section-inner cta-banner-inner">
         <div>
             <h2>¿Prefieres que te ayudemos por teléfono?</h2>
-            <p>Nuestro equipo agenda tu cita mientras hablamos, sin necesidad de llenar el formulario.</p>
+            <p>Nuestro equipo agenda la cita de tu mascota mientras hablamos, sin necesidad de llenar el formulario.</p>
         </div>
         <a href="tel:+576017420198" class="btn btn-primary">Llamar a la línea de citas</a>
     </div>
@@ -456,9 +472,9 @@
                     <circle cx="17" cy="17" r="17" fill="#7FFFD4"/>
                     <path d="M9 18c2.5-4 4.5-4 6 0s3.5 4 6 0" stroke="#0A2540" stroke-width="2.1" stroke-linecap="round" fill="none"/>
                 </svg>
-                <span>Marea <strong>Salud</strong></span>
+                <span>Huellitas <strong>Vet</strong></span>
             </a>
-            <p>Agendamiento de citas médicas para pacientes de las principales EPS del país.</p>
+            <p>Agendamiento de citas veterinarias para el cuidado de tu mascota en Bogotá.</p>
         </div>
 
         <div class="footer-col">
@@ -472,13 +488,13 @@
         <div class="footer-col">
             <h4>Contacto</h4>
             <a href="tel:+576017420198">(601) 742 0198</a>
-            <a href="mailto:citas@mareasalud.co">citas@mareasalud.co</a>
+            <a href="mailto:citas@huellitasvet.co">citas@huellitasvet.co</a>
             <span>Cra. 15 # 82-30, Bogotá</span>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Marea Salud. Entidad autorizada por la Superintendencia Nacional de Salud.</p>
+        <p>&copy; 2026 Huellitas Vet. Red de veterinarios verificados en Bogotá y alrededores.</p>
     </div>
 </footer>
 
