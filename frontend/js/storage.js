@@ -6,7 +6,7 @@
    (POST /api/citas) del backend.
    ========================================================= */
 
-const CLAVE_CITAS = 'marea_salud_citas';
+const CLAVE_CITAS = 'huellitas_vet_citas';
 
 function obtenerCitas() {
     try {
@@ -19,7 +19,13 @@ function obtenerCitas() {
 }
 
 function guardarCitas(citas) {
-    localStorage.setItem(CLAVE_CITAS, JSON.stringify(citas));
+    try {
+        localStorage.setItem(CLAVE_CITAS, JSON.stringify(citas));
+        return true;
+    } catch (error) {
+        console.error('No se pudieron guardar las citas (¿localStorage lleno o deshabilitado?):', error);
+        return false;
+    }
 }
 
 function agregarCita(cita) {
