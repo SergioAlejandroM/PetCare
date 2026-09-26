@@ -46,11 +46,14 @@ function crearTarjetaCita(cita) {
     articulo.className = 'cita-card';
     articulo.dataset.id = cita.id;
 
+    const raza = cita.raza ? ` · ${escaparHTML(cita.raza)}` : '';
+
     articulo.innerHTML = `
         <button type="button" class="cita-eliminar" data-id="${cita.id}" aria-label="Eliminar solicitud">&times;</button>
         <span class="cita-especialidad">${escaparHTML(cita.especialidad)}</span>
-        <p class="cita-nombre">${escaparHTML(cita.nombre)}</p>
-        <p>${escaparHTML(cita.eps)} · Sede ${escaparHTML(cita.sede)}</p>
+        <p class="cita-nombre">${escaparHTML(cita.nombreMascota)} (${escaparHTML(cita.especieMascota)}${raza})</p>
+        <p>Dueño/a: ${escaparHTML(cita.nombre)}</p>
+        <p>Sede ${escaparHTML(cita.sede)}</p>
         <p>${formatearFecha(cita.fecha)}</p>
         <p>${escaparHTML(cita.telefono)}</p>
     `;

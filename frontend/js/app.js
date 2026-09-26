@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const contadorCitas = document.getElementById('contadorCitas');
     const btnBorrarCitas = document.getElementById('btnBorrarCitas');
 
-    const CAMPOS_VALIDABLES = ['nombre', 'documento', 'correo', 'telefono', 'especialidad', 'fecha'];
+    const CAMPOS_VALIDABLES = ['nombre', 'documento', 'correo', 'telefono', 'nombreMascota', 'especieMascota', 'especialidad', 'fecha'];
+
+    let ocultarExitoTimeout;
 
     function pintarCitas() {
         renderizarCitas(obtenerCitas(), listaCitas, citasVacio, contadorCitas, btnBorrarCitas);
@@ -77,16 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
         mensajeExito.hidden = true;
 
         const datos = {
-            nombre: formulario.nombre.value,
+            nombre: formulario.nombre.value.trim(),
             tipoDocumento: formulario.tipoDocumento.value,
-            documento: formulario.documento.value,
-            correo: formulario.correo.value,
-            telefono: formulario.telefono.value,
-            eps: formulario.eps.value,
+            documento: formulario.documento.value.trim(),
+            correo: formulario.correo.value.trim(),
+            telefono: formulario.telefono.value.trim(),
+            nombreMascota: formulario.nombreMascota.value.trim(),
+            especieMascota: formulario.especieMascota.value,
+            raza: formulario.raza.value.trim(),
             especialidad: formulario.especialidad.value,
             sede: formulario.sede.value,
             fecha: formulario.fecha.value,
-            motivo: formulario.motivo.value,
+            motivo: formulario.motivo.value.trim(),
         };
 
         const errores = validarFormularioCita(datos);
@@ -110,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mensajeExito.hidden = false;
         formulario.reset();
 
-        clearTimeout(window._ocultarExitoTimeout);
-        window._ocultarExitoTimeout = setTimeout(() => { mensajeExito.hidden = true; }, 5000);
+        clearTimeout(ocultarExitoTimeout);
+        ocultarExitoTimeout = setTimeout(() => { mensajeExito.hidden = true; }, 5000);
     });
 
     listaCitas.addEventListener('click', (evento) => {

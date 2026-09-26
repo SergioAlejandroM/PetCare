@@ -7,7 +7,9 @@
 
 const REGEX = {
     nombre: /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,60}$/,
+    nombreMascota: /^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s]{2,40}$/,
     documento: /^\d{6,10}$/,
+    documentoPasaporte: /^[A-Za-z0-9]{5,12}$/,
     correo: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     telefono: /^\d{7,10}$/,
 };
@@ -24,8 +26,12 @@ function validarFormularioCita(datos) {
         errores.nombre = 'Escribe un nombre válido (solo letras y espacios).';
     }
 
-    if (!REGEX.documento.test(datos.documento.trim())) {
-        errores.documento = 'El documento debe tener entre 6 y 10 dígitos.';
+    // El pasaporte puede incluir letras y números; los demás documentos, solo dígitos.
+    const regexDocumento = datos.tipoDocumento === 'PA' ? REGEX.documentoPasaporte : REGEX.documento;
+    if (!regexDocumento.test(datos.documento.trim())) {
+        errores.documento = datos.tipoDocumento === 'PA'
+            ? 'El pasaporte debe tener entre 5 y 12 caracteres alfanuméricos.'
+            : 'El documento debe tener entre 6 y 10 dígitos.';
     }
 
     if (!REGEX.correo.test(datos.correo.trim())) {
@@ -34,6 +40,14 @@ function validarFormularioCita(datos) {
 
     if (!REGEX.telefono.test(datos.telefono.trim())) {
         errores.telefono = 'El teléfono debe tener entre 7 y 10 dígitos.';
+    }
+
+    if (!REGEX.nombreMascota.test(datos.nombreMascota.trim())) {
+        errores.nombreMascota = 'Escribe el nombre de tu mascota (2 a 40 caracteres).';
+    }
+
+    if (!datos.especieMascota) {
+        errores.especieMascota = 'Selecciona la especie de tu mascota.';
     }
 
     if (!datos.especialidad) {
