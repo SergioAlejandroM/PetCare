@@ -1,5 +1,5 @@
 /* =========================================================
-   MAREA SALUD — Sistema de diseño
+   HUELLITAS VET — Sistema de diseño
    Paleta: aguamarina como color insignia + teal profundo,
    azul tinta y ámbar cálido como acento de llamado a la acción.
    Tipografía: Sora (títulos) + Inter (texto e interfaz).
@@ -623,7 +623,7 @@ button { font-family: inherit; cursor: pointer; }
 .cita-card .cita-eliminar:hover { color: var(--danger); }
 
 /* =========================================================
-   MÉDICOS
+   VETERINARIOS
    ========================================================= */
 .medicos-grid {
     margin-top: 40px;
