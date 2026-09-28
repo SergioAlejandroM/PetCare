@@ -5,7 +5,7 @@ const {crearPaciente, listarPacientes, obtenerDueñoDelPaciente, obtenerPaciente
 
 router.post('/', crearPaciente);  // post: crear
 router.get('/', listarPacientes);
-router.get('/:id/dueño', obtenerDueñoDelPaciente)  // get: consultar todos
+router.get('/:id/dueno', obtenerDueñoDelPaciente)  // get: consultar todos
 router.get('/:id', obtenerPaciente);
 router.get('/:id/historial', historialPaciente)  //get: solo consulta uno
 router.put('/:id', actualizarPaciente);  //put: actualizar

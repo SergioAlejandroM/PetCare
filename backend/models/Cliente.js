@@ -2,13 +2,15 @@ const mongoose = require('mongoose');
 
 const clienteSchema = new mongoose.Schema({
     nombre: { type: String, required: true, trim: true},
-    telefono: {type: String, required: true, trim: true},
+    telefono: {type: String, required: true, trim: true, 
+    match: /^\d{7,10}$/},
     email: {
         type: String,
         required: true,
         trim: true,
         lowercase: true,
-        unique: true
+        unique: true,
+        match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     },
     direccion: { type: String, trim: true},
     activo: { type: Boolean, default: true}

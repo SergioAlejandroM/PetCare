@@ -5,7 +5,7 @@ const {asyncHandler, ApiError} = require('../middleware/errorHandler');
 
 const crearCliente = asyncHandler(async (req, res) => {
     const cliente = await Cliente.create(req.body);
-    req.status(201).json({ ok: true, data: cliente});
+    res.status(201).json({ ok: true, data: cliente});
 });
 
 const listarClientes = asyncHandler(async(req, res) =>{

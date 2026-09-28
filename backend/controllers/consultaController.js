@@ -6,7 +6,7 @@ const Cita = require('../models/Cita');
 const guardarConsulta = asyncHandler(async(req, res) => {
     const {cita} = req.body;
 
-    const citaExiste = Cita.findById(cita);
+    const citaExiste =  await Cita.findById(cita);
     if(!citaExiste) throw new ApiError(400, 'La cita asociada no existe');
 
     const consulta = await Consulta.create(req.body);
@@ -14,7 +14,7 @@ const guardarConsulta = asyncHandler(async(req, res) => {
     citaExiste.estado = 'Atendida';
     await citaExiste.save();
 
-    req.status(201).json({ ok: true, data: consulta});
+    res.status(201).json({ ok: true, data: consulta});
 });
 
 module.exports = { guardarConsulta };

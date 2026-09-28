@@ -1,5 +1,5 @@
 const Paciente = require('../models/Paciente');
-const Cita = requiere('../models/Cita');
+const Cita = require('../models/Cita');
 const Consulta = require('../models/Consulta');
 const {asyncHandler, ApiError} = require('../middleware/errorHandler');
 
@@ -11,12 +11,12 @@ const crearPaciente = asyncHandler(async(req,res) =>{
 
 
 const listarPacientes = asyncHandler(async(req,res) =>{
-    const pacientes = await Paciente.find({activo:true}).select('-dueño');
+    const pacientes = await Paciente.find({ activo: true }).populate('dueño', 'nombre telefono email direccion');
     res.json({ok:true, data: pacientes});
 });
 
 const obtenerDueñoDelPaciente = asyncHandler(async(req, res) => {
-    const paciente = await Paciente.find({activo:true}).populate('dueño');
+    const paciente = await Paciente.findById(req.params.id).populate('dueño');
     if(!paciente) throw new ApiError(404, 'Paciente no encontrado');
     res.json({ok: true, data: paciente.dueño});
 });
@@ -36,8 +36,8 @@ const historialPaciente = asyncHandler(async(req, res) =>{
 
 const actualizarPaciente = asyncHandler(async(req,res)=>{
     const paciente = await Paciente.findByIdAndUpdate(req.params.id, req.body,{
-        new: true,// actualiza
-        runValidators: true// se asegura de que los datos cumplan las reglas
+        new: true,
+        runValidators: true 
     });
     if(!paciente) throw new ApiError(404,'Paciente no encontrado');
     res.json({ok: true, data: paciente});
