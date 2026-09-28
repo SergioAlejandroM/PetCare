@@ -425,7 +425,7 @@ document.getElementById('formCliente').addEventListener('submit', async (evento)
    --------------------------------------------------------- */
 
 function poblarSelectClientes(select, valorSeleccionado = '') {
-    select.innerHTML = '<option value="" disabled>Selecciona un cliente…</option>'
+    select.innerHTML = '<option value="" disabled selected>Selecciona un cliente…</option>'
         + estado.clientes.map((c) => `<option value="${c._id}">${c.nombre} · ${c.telefono}</option>`).join('');
     if (valorSeleccionado) select.value = valorSeleccionado;
 }
